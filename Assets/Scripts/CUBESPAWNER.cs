@@ -47,4 +47,21 @@ public class CUBESPAWNER : MonoBehaviour
 
         }
     }
+    private void FixedUpdate()
+    {
+        GameObject tempGameObject = Instantiate<GameObject>(PrefabCubo);
+        tempGameObject.name = "CuboNumero" + numCubos;
+        Color c = new Color(Random.value, Random.value, Random.value);
+        tempGameObject.GetComponent<MeshRenderer>().material.color = c;
+        tempGameObject.transform.position = Random.insideUnitSphere;
+    }
+
+    private void Awake()
+    {
+        GameObject tempGameObject = Instantiate<GameObject>(PrefabCubo);
+        tempGameObject.name = "CuboNumero" + numCubos;
+        Color c = new Color(Random.value, Random.value, Random.value);
+        tempGameObject.GetComponent<MeshRenderer>().material.color = c;
+        tempGameObject.transform.position = Random.insideUnitSphere;
+    }
 }
