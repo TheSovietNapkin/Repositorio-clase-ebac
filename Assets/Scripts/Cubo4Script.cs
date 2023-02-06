@@ -4,33 +4,34 @@ using UnityEngine;
 
 public class Cubo4Script : MonoBehaviour
 {
-    public GameObject prefab;
-    private Renderer renderer;
-    bool Valor;
+    public CambiodeColorRGB detectordevalor;
+    public CambiodeColorRGB detectordevalor2;
     Renderer ren;
+    public bool Valor;
 
-    private void Start()
+    void Start()
     {
-        renderer = prefab.GetComponent<Renderer>();
-        Valor = true;
+        detectordevalor = GameObject.Find("Cube (1)").GetComponent<CambiodeColorRGB>();
+        detectordevalor2 = GameObject.Find("Cube (2)").GetComponent<CambiodeColorRGB>();
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
+        Valor = !Valor;
 
-        if (renderer.material.color != Color.white || Valor == true)
+        if (detectordevalor || detectordevalor2 == true)
         {
+            Debug.Log("El valor es de los 2 cybos es verdadero");
             ren = GetComponent<Renderer>();
             ren.material.color = Color.white;
-            Debug.Log("la variable es verdadera");
-            Valor = !Valor;
+            
         }
-        else if (renderer.material.color != Color.black || Valor == false)
+        else if (detectordevalor || detectordevalor2 == false) ;
         {
+            Debug.Log("El valor de los 2 cubos es falso");
             ren = GetComponent<Renderer>();
-            ren.material.color = Color.white;
-            Debug.Log("La variable es falsa");
-            Valor = !Valor;
+            ren.material.color = Color.black;
+            
 
         }
     }

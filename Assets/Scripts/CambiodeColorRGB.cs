@@ -14,7 +14,6 @@ public class CambiodeColorRGB : MonoBehaviour
     {
 
 
-
     }
 
     // Update is called once per frame
