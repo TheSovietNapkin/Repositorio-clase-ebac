@@ -4,33 +4,24 @@ using UnityEngine;
 
 public class Cubo3script : MonoBehaviour
 {
-    public GameObject prefab;
-    private Renderer renderer;
-    bool Valor;
-    Renderer ren;
+    public GameObject gameObjectWithBoolean;
+    private bool booleanHolder;
 
     private void Start()
     {
-        renderer = prefab.GetComponent<Renderer>();
-        Valor = true;
-    }
+     //   booleanHolder = CambiodeColorRGB.GetComponent<bool>();
 
+    }
     private void FixedUpdate()
     {
        
-        if (renderer.material.color != Color.white && Valor == true)
+        if ( booleanHolder == true)
         {
-            ren = GetComponent<Renderer>();
-            ren.material.color = Color.white;
-            Debug.Log("la variable es verdadera");
-            Valor = !Valor;
+            
         }
-        else if (renderer.material.color != Color.black && Valor == false)
+        else if ( false)
         {
-            ren = GetComponent<Renderer>();
-            ren.material.color = Color.white;
-            Debug.Log("La variable es falsa");
-            Valor = !Valor;
+            
            
         }
     }

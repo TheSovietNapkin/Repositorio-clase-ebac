@@ -5,7 +5,7 @@ using UnityEngine;
 public class CambiodeColorRGB : MonoBehaviour
 {
 
-    bool variable2;
+   public bool variable2;
 
 
     Renderer ren;
