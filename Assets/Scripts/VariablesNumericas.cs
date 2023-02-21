@@ -28,7 +28,7 @@ public class VariablesNumericas : MonoBehaviour
         f = a / b;
         Debug.Log(c);
 
-        miInt = Random.RandomRange(a, b);
+        miInt = Random.Range(a, b);
         if (miInt % 2 == 0)
         {
             Debug.Log("El numero " + miInt + "es par");

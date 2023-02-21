@@ -25,7 +25,7 @@ public class VariablesCharyString : MonoBehaviour
         miCaracter = miString[13];
         string miNombre = "Ari Joseph";
         string misApellidos = "Seidel Martinez";
-        string salida = $"Mi nombre es: {miNombre}  mis Apellidos son {misApellidos}";
+        string salida = $"Mi nombre es: {miNombre} Y mis Apellidos son {misApellidos}";
         int longitud = miString.Length;
         Debug.Log(salida);
     }
