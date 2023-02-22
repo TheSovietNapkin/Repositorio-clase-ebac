@@ -8,14 +8,10 @@ public class StringCambioDeColor : MonoBehaviour
 
     void Start()
     {
-        
-    // "Walter", "Hesienberg", "Jesse", "Gus", ""
 
     int randomIndex = UnityEngine.Random.Range(0, options.Length);
-
     string myString = options[randomIndex];
-
-        Material material = GetComponent<Renderer>().material;
+     Material material = GetComponent<Renderer>().material;
 
         switch (myString)
         {
