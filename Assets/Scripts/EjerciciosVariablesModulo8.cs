@@ -16,7 +16,7 @@ public class EjerciciosVariablesModulo8 : MonoBehaviour
     string valorParaParse1 = "3";
     string valorParaParse2 = "5";
     int sumaDeParse;
-    string oracion = "Hola mE gustarIa Saber quiEn No Busco El Riñon de Gabriel";
+    string oracion = "Hola me gustaria saber quien no busco el riñon de gabriel";
     string output = "";
     string oracionParaEliminar = "meseemeth";
 
@@ -26,17 +26,15 @@ public class EjerciciosVariablesModulo8 : MonoBehaviour
 
     void Start()
     {
-   
+
 
         for (int i = 0; i < oracion.Length; i++)
         {
-            char HEISENBERG = oracion[i];
-
-            if (HEISENBERG == 'H' || HEISENBERG == 'E' || HEISENBERG == 'I' || HEISENBERG == 'S' || HEISENBERG == 'E' ||
-                HEISENBERG == 'N' || HEISENBERG == 'B' || HEISENBERG == 'E' || HEISENBERG == 'R' || HEISENBERG == 'G')
+            if (i % 2 == 1)
             {
-                output += HEISENBERG;
+                continue; 
             }
+            output += oracion[i]; 
         }
         Debug.Log(output); 
 
@@ -49,7 +47,7 @@ public class EjerciciosVariablesModulo8 : MonoBehaviour
         ValorSumadoFloat = valor3 + valor4;
         valorSumadoInt = (int)ValorSumadoFloat;
         Debug.Log(valorSumadoInt);
-        string flotanteEnString = flotanteAString.ToString();
+        string flotanteEnString = flotanteAString.ToString("n4");
         Debug.Log(flotanteEnString);
 
         int num1, num2;
