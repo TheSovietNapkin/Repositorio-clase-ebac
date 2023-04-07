@@ -21,7 +21,7 @@ public class VariablesCharyString : MonoBehaviour
         string miString = "Hola desde EBAC";
         string miSegundoString = miString.ToUpper();
         string miTercerString = miString + " " + miSegundoString;
-        string ejemploEscpae = "c:\\Users\\Ari\\Documentos";
+       // string ejemploEscpae = "c:\\Users\\Ari\\Documentos";
         miCaracter = miString[13];
         string miNombre = "Ari Joseph";
         string misApellidos = "Seidel Martinez";
