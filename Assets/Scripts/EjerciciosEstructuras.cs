@@ -4,34 +4,70 @@ using UnityEngine;
 
 public class EjerciciosEstructuras : MonoBehaviour
 {
+    int numero1 = 4;
+    int numero2 = 5;
+    int numero3 = 9;
+    List<int> milista = new List<int>();
+    List<int> ordenadorNumeros = new List<int>();
+    int[] listaNumeros = new int[6];
+    HashSet<string> elementosRepetidos = new HashSet<string>()
+    {"Heisenberg", "Heisenberg", "Jesse", "Skyler", "Skyler", "Gustavo" };
+    HashSet<string> nombresUnicos = new HashSet<string>();
+    HashSet<string> nombreDobles = new HashSet<string>();
 
-    static void Funcion(string[] args)
+    void Start()
     {
-        List<int> milista = new List<int>();
-        int numero1 = 4;
-        int numero2 = 4;
-        int numero3 = 9;
-        LlenadordeLista(numero1, numero2, numero3);
+        
 
-         void LlenadordeLista(int count, int min, int max)
-         {
-
-            for (int i = 0; i < count; i++)
+        foreach (string nombres in elementosRepetidos)
+        {
+            if (!nombresUnicos.Contains(nombres))
             {
-                int numeroAlAzar = Random.Range(min, max);
-                milista.Add(numeroAlAzar);
-
-               
+                nombresUnicos.Add(nombres);
             }
-
-            foreach (int i in milista)
+            else
             {
-                Debug.Log(i);
+                nombreDobles.Add(nombres);
             }
-         }
-       
+        }
+
+        foreach (string nombres in nombresUnicos)
+        {
+            Debug.Log(nombres);
+        }
+
+        foreach (string duplicate in nombreDobles)
+        {
+            Debug.LogFormat("Duplicate: {0}", duplicate);
+        }
+
+
+
+        for (int e = 0; e < listaNumeros.Length; e++)
+        {
+            listaNumeros[e] = Random.Range(1, 20);
+            ordenadorNumeros.Add(e);
+
+        }
+        ordenadorNumeros.Sort();
+
+        foreach (int e in ordenadorNumeros)
+        {
+            Debug.Log(e);
+        }
+
+        for (int i = 0; i < numero1; i++)
+        {
+            int numeroAlAzar = Random.Range(numero2, numero3);
+            milista.Add(numeroAlAzar);
+            Debug.Log(numeroAlAzar);
+        }
+      
+
+
+
 
 
     }
-
 }
+
