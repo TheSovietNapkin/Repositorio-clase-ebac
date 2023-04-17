@@ -10,14 +10,19 @@ public class EjerciciosEstructuras : MonoBehaviour
     List<int> milista = new List<int>();
     List<int> ordenadorNumeros = new List<int>();
     int[] listaNumeros = new int[6];
+    Stack<string> breakingBad = new Stack<string>();
+    Queue<string> badBreaking = new Queue<string>(); 
+
     HashSet<string> elementosRepetidos = new HashSet<string>()
     {"Heisenberg", "Heisenberg", "Jesse", "Skyler", "Skyler", "Gustavo" };
     HashSet<string> nombresUnicos = new HashSet<string>();
     HashSet<string> nombreDobles = new HashSet<string>();
 
+
+
+    
     void Start()
     {
-        
 
         foreach (string nombres in elementosRepetidos)
         {
@@ -62,12 +67,47 @@ public class EjerciciosEstructuras : MonoBehaviour
             milista.Add(numeroAlAzar);
             Debug.Log(numeroAlAzar);
         }
-      
 
 
+    }
 
+    public void BreakingBad()
+    {
 
+        // El Primero que vea breakig bad es el ultimo que termina viendolo (FILO)
+        breakingBad.Push("Skyler");
+        breakingBad.Push("Danger,");
+        breakingBad.Push("The");
+        breakingBad.Push("Am");
+        breakingBad.Push("I");
+        Debug.Log(breakingBad.Peek());
+        string Sky = breakingBad.Pop();
+        Debug.Log(breakingBad.Peek());
+        string Dan = breakingBad.Pop();
+        Debug.Log(breakingBad.Peek());
+        string The = breakingBad.Pop();
+        Debug.Log(breakingBad.Peek());
+        string Am = breakingBad.Pop();
+        Debug.Log(breakingBad.Peek());
+        string I = breakingBad.Pop();
 
+        //El primero en ver breaking bad es el primero que lo acaba (FIFO)
+
+        badBreaking.Enqueue(I);
+        badBreaking.Enqueue(Am);
+        badBreaking.Enqueue(The);
+        badBreaking.Enqueue(Dan);
+        badBreaking.Enqueue(Sky);
+        Debug.Log(badBreaking.Peek());
+        badBreaking.Dequeue();
+        Debug.Log(badBreaking.Peek());
+        badBreaking.Dequeue();
+        Debug.Log(badBreaking.Peek());
+        badBreaking.Dequeue();
+        Debug.Log(badBreaking.Peek());
+        badBreaking.Dequeue();
+        Debug.Log(badBreaking.Peek());
+        badBreaking.Dequeue();
     }
 }
 
